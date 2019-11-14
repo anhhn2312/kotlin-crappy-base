@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name" translatable="false">Kotlin Awesome</string>
+    <string name="scroll_behaviour" translatable="false">@string/appbar_scrolling_view_behavior</string>
+    <string name="label_no_data">No data available</string>
+    <string name="label_network_error">Error occurred while connecting to the server</string>
+    <string name="label_no_internet_connection">No Internet Connection!</string>
+
+    <string name="label_user_name">Name: %s</string>
+    <string name="label_user_email">Email: %s</string>
+    <string name="label_user_phone">Tel: %s</string>
+    <string name="label_user_address">Address: %s</string>
+</resources>

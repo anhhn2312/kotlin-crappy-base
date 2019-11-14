@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'io.fabric'
+apply plugin: 'com.novoda.build-properties'
+apply plugin: "org.jlleitschuh.gradle.ktlint"
+
+ktlint {
+    version = "0.32.0"
+    debug = true
+    verbose = true
+    android = true
+    reporter = "checkstyle"
+    ignoreFailures = true
+}
+
+android {
+    def androidConf = rootProject.ext.android
+    def signingConf = rootProject.ext.signing
+    def envConf = rootProject.ext.env
+
+    compileSdkVersion androidConf.compileSdkVersion
+    defaultConfig {
+        applicationId androidConf.applicationId
+        minSdkVersion androidConf.minSdkVersion
+        targetSdkVersion androidConf.targetSdkVersion
+        versionCode androidConf.versionCode
+        versionName androidConf.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    signingConfigs {
+        platform {
+            storeFile file(signingConf.storePath)
+            storePassword(signingConf.storePassword)
+            keyAlias(signingConf.alias)
+            keyPassword(signingConf.aliasPassword)
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.platform
+        }
+        debug {
+            debuggable true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "env"
+    productFlavors {
+        dev {
+            dimension "env"
+            buildConfigString "BASE_URL", envConf.devUrl
+        }
+
+        production {
+            dimension "env"
+            buildConfigString "BASE_URL", envConf.productionUrl
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        htmlReport true
+        xmlReport true
+        disable 'InvalidPackage'
+        check 'Interoperability'
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    configurations {
+        all*.exclude module: 'javax.annotation'
+    }
+}
+
+dependencies {
+    def dependency = rootProject.ext
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation project(path: ':data')
+
+    kapt dependency.processing
+}

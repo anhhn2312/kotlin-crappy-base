@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def conf = rootProject.ext.android
+
+    compileSdkVersion conf.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion conf.minSdkVersion
+        targetSdkVersion conf.targetSdkVersion
+        versionCode conf.versionCode
+        versionName conf.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/jniLibs']
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
+}
+
+dependencies {
+    def dependency = rootProject.ext
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api project(':resources')
+
+    api dependency.kotlin
+    api dependency.networking
+    api dependency.rxJava
+    api dependency.dagger
+    api dependency.archs
+
+    debugApi dependency.developmentDependencies
+    releaseApi dependency.releaseDevelopmentDependencies
+    testApi dependency.testing
+    androidTestApi dependency.androidTesting
+
+    kapt dependency.processing
+}

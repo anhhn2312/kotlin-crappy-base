@@ -1,0 +1,145 @@
+ext {
+    rxJava2 = '2.1.9'
+    rxKotlin = '2.2.0'
+    rxAndroid = '2.0.1'
+    room = '2.1.0-alpha06'
+    paging = '2.1.0'
+    androidX = '1.1.0-beta01'
+    lifecycle = '2.0.0'
+    navigation = '1.0.0'
+    workManager = '1.0.1'
+    constraintLayout = '2.0.0-alpha4'
+    dagger2 = '2.22.1'
+    butterKnife = '8.8.1'
+    javaxAnnotation = '10.0-b28'
+    okHttp = '3.14.1'
+    retrofit2 = '2.5.0'
+    gson = '2.8.5'
+    glide = '4.9.0'
+    glideTransformation = '4.0.0'
+    timber = '4.7.1'
+    androidState = '1.4.1'
+    junit = '4.13-beta-2'
+    mockito = '2.23.4'
+    mockitoKotlin = '1.5.0'
+    assertJ = '3.12.2'
+    pandora = 'v1.2.2'
+    kotlin_version = '1.3.21'
+
+    kotlin = [
+            "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version",
+    ]
+
+    supportLibraries = [
+            'androidx.appcompat:appcompat:1.1.0-alpha04',
+            "androidx.drawerlayout:drawerlayout:1.0.0",
+            'androidx.recyclerview:recyclerview-selection:1.1.0-alpha01',
+            'com.google.android.material:material:1.1.0-alpha05',
+            "androidx.cardview:cardview:1.0.0",
+            'androidx.recyclerview:recyclerview:1.1.0-alpha04',
+            'androidx.annotation:annotation:1.1.0-beta01',
+            'androidx.core:core:1.1.0-alpha05',
+            'androidx.core:core-ktx:1.1.0-alpha05',
+            'androidx.fragment:fragment:1.1.0-alpha06',
+            'androidx.fragment:fragment-ktx:1.1.0-alpha06',
+            'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0',
+            'androidx.coordinatorlayout:coordinatorlayout:1.0.0',
+            "androidx.constraintlayout:constraintlayout:$constraintLayout",
+            "androidx.constraintlayout:constraintlayout-solver:$constraintLayout",
+            "android.arch.navigation:navigation-ui:$navigation",
+            "android.arch.navigation:navigation-runtime:$navigation",
+            "android.arch.navigation:navigation-runtime-ktx:$navigation",
+            "android.arch.navigation:navigation-fragment:$navigation",
+            "android.arch.navigation:navigation-fragment-ktx:$navigation",
+            'androidx.browser:browser:1.0.0'
+    ]
+
+    extrasLibraries = [
+            'com.github.daniel-stoneuk:material-about-library:2.1.0',
+            'com.scottyab:secure-preferences-lib:0.1.7',
+            "com.evernote:android-state:$androidState",
+            'de.hdodenhof:circleimageview:3.0.0',
+            'com.afollestad.material-dialogs:core:2.0.3',
+            'com.airbnb:deeplinkdispatch:4.1.0',
+            'com.github.sharish:ShimmerRecyclerView:v1.3'
+    ]
+
+    networking = [
+            "com.squareup.okhttp3:okhttp:$okHttp",
+            "com.squareup.okhttp3:logging-interceptor:$okHttp",
+            "com.squareup.retrofit2:retrofit:$retrofit2",
+            "com.squareup.retrofit2:adapter-rxjava2:$retrofit2",
+            "com.squareup.retrofit2:converter-gson:$retrofit2",
+            "com.google.code.gson:gson:$gson",
+            "com.github.bumptech.glide:glide:$glide",
+            "com.jakewharton.timber:timber:$timber"
+    ]
+
+    rxJava = [
+            "io.reactivex.rxjava2:rxjava:$rxJava2",
+            "io.reactivex.rxjava2:rxkotlin:$rxKotlin",
+            "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+    ]
+
+    dagger = [
+            "com.google.dagger:dagger:$dagger2",
+            "com.google.dagger:dagger-android-support:$dagger2",
+            "org.glassfish:javax.annotation:$javaxAnnotation"
+    ]
+
+    archs = [
+            "androidx.lifecycle:lifecycle-extensions:$lifecycle",
+            "androidx.lifecycle:lifecycle-livedata:$lifecycle",
+            "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle",
+            "androidx.paging:paging-common:$paging",
+            "androidx.paging:paging-runtime:$paging",
+            "androidx.room:room-runtime:$room",
+            "androidx.room:room-rxjava2:$room",
+            'androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0',
+            'androidx.lifecycle:lifecycle-reactivestreams-ktx:2.0.0',
+            "android.arch.work:work-runtime:$workManager",
+            "android.arch.work:work-rxjava2:$workManager"
+    ]
+
+    firebase = [
+            'com.google.android.gms:play-services-auth:16.0.1',
+            'com.google.firebase:firebase-core:16.0.8',
+            'com.crashlytics.sdk.android:crashlytics:2.9.9',
+            'com.google.firebase:firebase-messaging:17.6.0',
+            'com.google.firebase:firebase-auth:16.2.1',
+            'com.google.firebase:firebase-config:16.5.0',
+            'com.google.firebase:firebase-database:16.1.0'
+    ]
+
+    processing = [
+            "com.google.dagger:dagger-android-processor:$dagger2",
+            "com.google.dagger:dagger-compiler:$dagger2",
+            "com.github.bumptech.glide:compiler:$glide",
+            "androidx.room:room-compiler:$room",
+            "com.airbnb:deeplinkdispatch-processor:4.1.0"
+    ]
+
+    testing = [
+            "junit:junit:$junit",
+            "org.assertj:assertj-core:$assertJ",
+            "org.mockito:mockito-core:$mockito",
+            "com.nhaarman:mockito-kotlin:$mockitoKotlin",
+    ]
+
+    androidTesting = [
+            'androidx.test:runner:1.2.0-alpha04',
+            'androidx.test:rules:1.2.0-alpha04',
+            'androidx.test.espresso:espresso-core:3.2.0-alpha04',
+            'androidx.test.espresso:espresso-contrib:3.2.0-alpha04',
+            'androidx.test.espresso:espresso-intents:3.2.0-alpha04',
+            'androidx.annotation:annotation:1.1.0-beta01',
+    ]
+
+    developmentDependencies = [
+            "com.github.whataa:pandora:$pandora"
+    ]
+
+    releaseDevelopmentDependencies = [
+            "com.github.whataa:pandora-no-op:$pandora"
+    ]
+}

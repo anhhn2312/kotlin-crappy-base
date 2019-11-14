@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/light_button_disabled" />
+            <corners android:radius="@dimen/default_button_corner" />
+        </shape>
+    </item>
+
+    <item android:state_enabled="true">
+        <shape>
+            <gradient android:angle="0" android:endColor="?color_toolbar_gradientEnd" android:startColor="?color_toolbar_gradientStart" />
+            <corners android:radius="@dimen/default_button_corner" />
+        </shape>
+    </item>
+</selector>

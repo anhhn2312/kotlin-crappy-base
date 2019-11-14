@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Common color-->
+    <color name="lightWindowBackground">#eaeaea</color>
+    <color name="lightDivider">#d8d8d8</color>
+    <color name="light_patch_addition_color">#CCFFCC</color>
+    <color name="light_patch_deletion_color">#FFDDDD</color>
+    <color name="light_patch_ref_color">#EEEEEE</color>
+    <color name="light_accent">#4B9EBC</color>
+    <color name="light_accent_gradient">#07C7C7</color>
+    <color name="light_primary">#07C7C7</color>
+    <color name="light_primary_dark">#4B9EBC</color>
+    <color name="light_content_bg">#ffffff</color>
+    <color name="light_content_bg_pressed">#dedede</color>
+    <color name="light_navview_bg">#fafafa</color>
+    <color name="light_control_color">#FFFFFF</color>
+    <color name="light_badge_background">#595dff</color>
+    <color name="light_badge_press_background">#0080FF</color>
+
+    <!--Text-->
+    <color name="light_textColorPrimary">#252525</color>
+    <color name="light_textColorSecondary">#757575</color>
+    <color name="light_textColorTertiary">#4B9EBC</color>
+    <color name="light_textBlockTitle">#636363</color>
+    <color name="light_textColorToolbar">#ffffff</color>
+    <color name="light_textButtonPrimary">#ffffff</color>
+    <color name="light_textHint">#a6a6a6</color>
+    <color name="light_button_disabled">#c0c0c0</color>
+
+    <style name="ThemeLight" parent="ThemeLight.Base" />
+
+    <style name="ThemeLightSwipeToBack" parent="ThemeLight.Base">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="ThemeLight.Base" parent="Theme.Light.NoActionBar">
+        <item name="container_background">@color/lightWindowBackground</item>
+        <item name="android:windowBackground">@color/lightWindowBackground</item>
+        <item name="colorPrimary">@color/light_primary</item>
+        <item name="colorPrimaryDark">@color/light_primary_dark</item>
+        <item name="colorAccent">@color/light_accent</item>
+        <item name="colorControlNormal">@color/light_accent</item>
+        <item name="colorControlHighlight">@color/light_content_bg_pressed</item>
+        <item name="colorControlActivated">?colorAccent</item>
+        <item name="actionModeBackground">?colorPrimary</item>
+        <item name="textColorToolbar">@color/light_textColorToolbar</item>
+        <item name="colorButtonNormal">@color/light_textButtonPrimary</item>
+        <item name="card_background">@color/light_content_bg</item>
+        <item name="content_background">@color/light_content_bg</item>
+        <item name="content_background_pressed">@color/light_content_bg_pressed</item>
+        <item name="dividerColor">@color/lightDivider</item>
+        <item name="default_elevation">@dimen/default_elevation</item>
+        <item name="color_toolbar_gradientStart">@color/light_accent</item>
+        <item name="color_toolbar_gradientEnd">@color/light_accent_gradient</item>
+
+        <item name="android:textColorPrimary">@color/light_textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/light_textColorSecondary</item>
+        <item name="android:textColorTertiary">@color/light_textColorTertiary</item>
+        <item name="textBlockTitle">@color/light_textBlockTitle</item>
+
+        <item name="android:toolbarStyle" tools:targetApi="lollipop">@style/ToolbarStyleLight</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/light_navview_bg</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap" tools:targetApi="lollipop">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="lollipop">true</item>
+        <item name="icon_color">@color/light_content_bg</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:colorEdgeEffect" tools:targetApi="lollipop">?colorPrimary</item>
+        <item name="android:dialogTheme">@style/DialogThemeLight</item>
+        <item name="android:alertDialogTheme">@style/DialogThemeLight</item>
+
+        <item name="editTextStyle">@style/EditTextThemeLight</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+        <item name="md_font_title">@font/muli_bold</item>
+        <item name="md_font_body">@font/muli_regular</item>
+        <item name="md_font_button">@font/muli_bold</item>
+
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="EditTextThemeLight" parent="Base.Widget.MaterialComponents.TextInputEditText">
+        <item name="android:textColorHint">@color/light_textHint</item>
+        <item name="android:colorControlHighlight" tools:targetApi="lollipop">@color/light_content_bg</item>
+        <item name="android:colorControlActivated" tools:targetApi="lollipop">@color/light_content_bg</item>
+    </style>
+
+    <style name="DialogThemeLight" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:toolbarStyle" tools:targetApi="lollipop">@style/ToolbarStyleLight</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="card_background">@color/cardview_light_background</item>
+        <item name="icon_color">@color/light_content_bg</item>
+        <item name="dividerColor">@color/lightDivider</item>
+        <item name="android:windowBackground">@color/lightWindowBackground</item>
+        <item name="colorPrimary">@color/light_primary</item>
+        <item name="colorPrimaryDark">@color/light_primary_dark</item>
+        <item name="colorAccent">@color/light_accent</item>
+    </style>
+
+    <style name="ToolbarStyleLight">
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="android:textColorPrimary">@color/light_textColorPrimary</item>
+        <item name="navigationIcon">@drawable/ic_arrow_back_white</item>
+        <item name="colorControlNormal">@color/light_control_color</item>
+        <item name="colorControlHighlight">@color/light_control_color</item>
+        <item name="popupTheme">@style/PopupThemeLight</item>
+    </style>
+
+    <style name="PopupThemeLight" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/lightWindowBackground</item>
+    </style>
+
+    <!--Styling bottom navigation view-->
+    <style name="BottomNavigationViewStyle">
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.BottomNavigationView.Inactive</item>
+    </style>
+
+    <style name="TextAppearance" />
+
+    <style name="TextAppearance.BottomNavigationView" />
+    <!-- inactive tab icon style -->
+    <style name="TextAppearance.BottomNavigationView.Inactive">
+        <item name="fontFamily">@font/muli_regular</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+    </style>
+    <!-- active tab icon style -->
+    <style name="TextAppearance.BottomNavigationView.Active">
+        <item name="fontFamily">@font/muli_semibold</item>
+        <item name="android:textColor">?colorAccent</item>
+        <item name="android:textSize">@dimen/text_size_xxsmall</item>
+    </style>
+
+    <style name="CustomRatingBar" parent="@style/Base.Widget.AppCompat.RatingBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">24dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1</item>
+        <item name="android:isIndicator">false</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog</item>
+    </style>
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+    </style>
+
+</resources>

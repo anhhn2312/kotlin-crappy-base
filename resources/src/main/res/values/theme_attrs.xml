@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="card_background" format="color|reference" />
+    <attr name="container_background" format="color|reference" />
+    <attr name="content_background" format="color|reference" />
+    <attr name="content_background_pressed" format="color|reference" />
+    <attr name="color_toolbar_gradientStart" format="color|reference" />
+    <attr name="color_toolbar_gradientEnd" format="color|reference" />
+    <attr name="textColorToolbar" format="color|reference" />
+    <attr name="textBlockTitle" format="color|reference" />
+    <attr name="default_elevation" format="dimension" />
+    <attr name="icon_color" format="color|reference" />
+    <attr name="dividerColor" format="color|reference" />
+
+</resources>

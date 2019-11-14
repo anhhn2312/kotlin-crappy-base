@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="darkWindowBackground">#22252A</color>
+    <color name="darkDivider">#10FFFFFF</color>
+    <color name="dark_patch_addition_color">@color/material_green_900</color>
+    <color name="dark_patch_deletion_color">@color/material_red_900</color>
+    <color name="dark_patch_ref_color">@color/material_blue_grey_500</color>
+
+    <style name="ThemeDark" parent="ThemeDark.Base" />
+
+    <style name="ThemeDarkSwipeToBack" parent="ThemeDark.Base">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="ThemeDark.Base" parent="Theme.Dark.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="card_background">#2D3035</item>
+        <item name="icon_color">#eee</item>
+        <item name="dividerColor">@color/darkDivider</item>
+        <item name="android:windowBackground">@color/darkWindowBackground</item>
+        <item name="container_background">@color/darkWindowBackground</item>
+        <item name="colorPrimary">#2D3035</item>
+        <item name="colorPrimaryDark">#26282C</item>
+        <item name="colorAccent">#2196F3</item>
+        <item name="colorControlNormal">?colorAccent</item>
+        <item name="actionModeBackground">?colorPrimary</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:textColorPrimary">#eee</item>
+        <item name="android:textColorSecondary">@color/light_textColorSecondary</item>
+        <item name="android:textColorTertiary">#ffe0e0e0</item>
+        <item name="android:windowAllowEnterTransitionOverlap" tools:targetApi="lollipop">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="lollipop">true</item>
+        <item name="android:colorEdgeEffect" tools:targetApi="lollipop">?colorPrimary</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/transparent</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+        <item name="android:dialogTheme">@style/DialogThemeDark</item>
+        <item name="android:alertDialogTheme">@style/DialogThemeDark</item>
+        <item name="android:toolbarStyle" tools:targetApi="lollipop">@style/ToolbarStyleDark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:popupMenuStyle">@style/PopupMenuDark</item>
+        <item name="android:spinnerDropDownItemStyle">@style/PopupMenuDark</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/darkWindowBackground</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+        <item name="md_font_title">@font/muli_bold</item>
+        <item name="md_font_body">@font/muli_regular</item>
+        <item name="md_font_button">@font/muli_bold</item>
+    </style>
+
+    <style name="PopupMenuDark" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@color/darkWindowBackground</item>
+    </style>
+
+    <style name="DialogThemeDark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:toolbarStyle" tools:targetApi="lollipop">@style/ToolbarStyleDark</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="card_background">#2D3035</item>
+        <item name="icon_color">#eee</item>
+        <item name="colorPrimary">#2D3035</item>
+        <item name="colorPrimaryDark">#26282C</item>
+        <item name="colorAccent">#2196F3</item>
+        <item name="android:windowBackground">@color/darkWindowBackground</item>
+    </style>
+
+    <style name="AppTheme.AboutActivity.Dark" parent="ThemeDark">
+        <item name="mal_popupOverlay">@style/Theme.Mal.Dark.PopupOverlay</item>
+        <item name="colorPrimary">#2D3035</item>
+        <item name="colorPrimaryDark">#26282C</item>
+        <item name="colorAccent">#2196F3</item>
+        <item name="mal_lightActionBar">false</item>
+        <item name="mal_color_primary">#eee</item>
+        <item name="mal_color_secondary">#ffe0e0e0</item>
+        <item name="mal_card_background">#2D3035</item>
+    </style>
+
+    <style name="ToolbarStyleDark">
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="android:colorControlHighlight" tools:targetApi="lollipop">@color/light_content_bg_pressed</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlHighlight">#42ffffff</item>
+        <item name="popupTheme">@style/PopupThemeDark</item>
+    </style>
+
+    <style name="PopupThemeDark" parent="ThemeOverlay.AppCompat">
+        <item name="android:colorBackground">@color/darkWindowBackground</item>
+    </style>
+
+</resources>

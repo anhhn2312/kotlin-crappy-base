@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">220dp</item>
+    </style>
+
+    <style name="CardViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?card_background</item>
+        <item name="android:foreground">?selectableItemBackgroundBorderless</item>
+        <item name="cardCornerRadius">1dp</item>
+        <item name="cardBackgroundColor">?card_background</item>
+        <item name="cardElevation">?default_elevation</item>
+    </style>
+
+    <style name="ButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/btn_common</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="android:textColor">?colorButtonNormal</item>
+        <item name="android:outlineProvider" tools:targetApi="lollipop">background</item>
+        <item name="android:elevation" tools:targetApi="lollipop">@dimen/default_elevation</item>
+        <item name="fontFamily">@font/muli_semibold</item>
+        <item name="android:textSize">@dimen/text_size_xxsmall</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="elevation">@dimen/default_elevation</item>
+    </style>
+
+    <style name="ButtonStyle.Normal">
+        <item name="android:layout_height">@dimen/default_button_height</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="ButtonStyle.Small">
+        <item name="android:layout_height">@dimen/small_button_height</item>
+        <item name="android:textSize">@dimen/text_size_normal</item>
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@animator/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@animator/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@animator/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@animator/slide_out_right</item>
+    </style>
+
+</resources>
